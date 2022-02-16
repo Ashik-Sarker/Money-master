@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container{
-    height: 80%;
-    width: 80%;
-    border: 2px solid black;
-    margin: auto;
+body{
+    background-color: rgb(226, 223, 219);
 }

@@ -6,61 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monthly Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- main Section -->
     <section>
-        <div class="bg-zinc-50 w-3/4 mx-auto mt-5 p-10">
+        <div class="bg-white w-3/4 h-auto mx-auto md:mb-10 p-10">
             <div>
-                <h1 class="text-center text-3xl font-bold md:text-5xl md:text-rose-700">Monthly Calculator</h1>
+                <h1 class="text-center text-3xl font-bold md:text-5xl md:text-rose-600">Monthly Calculator</h1>
             </div>
             
-            <div class="grid grid-cols-1 md:my-1 md:grid-cols-2 gap-10">
+            <div class="grid grid-cols-1 md:m-5 md:grid-cols-2 gap-10">
                 <!-- Images area -->
-                <div class=" border-black md:h-3/4  md:mt-10 mt-5">
+                <div class="border-black md:h-3/4  md:mt-10 mt-5">
                     <img class="h-full w-full rounded" src="images/giorgio-trovato-WyxqQpyFNk8-unsplash.jpg" alt="">
                 </div>
 
                 <!-- Calculation Area -->
-                <div class="border-2 border-black rounded md:border-0 text-center md:mt-10 md:h-3/4 p-2 md:ml-24 bg-slate-100">
+                <div class=" rounded md:border-0 text-center md:mt-10 md:h-3/4 py-3 md:ml-24 bg-slate-100 shadow-xl">
                     <!-- Income area -->
                     <h3 class="md:text-2xl text-xl font-bold md:mt-10">Income</h3>
                     <div class="md:mt-3 mt-2">
                         <label class="md:mr-1 md:text-xl font-semibold" for="">Income :</label>
-                        <input type="text" class=" md:h-7 bg-gray-300 rounded">
+                        <input id="income" type="text" placeholder="Enter your income" class="md:p-2 md:h-7 pl-2 bg-gray-300 rounded">
                     </div>
                     <!-- Expenses area -->
-                    <h3 class="md:text-2xl text-xl md:mt-16 mt-7 font-bold">Expenses</h3>
+                    <h3 class="md:text-2xl text-xl md:mt-12 mt-7 font-bold">Expenses</h3>
                     <div class="mt-2 md:mt-3">
                         <label class="mr-6 md:text-xl font-semibold" for="">Food :</label>
-                        <input type="text" class="md:h-7 bg-gray-300 rounded">
+                        <input id="food" type="text" placeholder="Food Expenses" class=" md:p-2 md:h-7 pl-2 bg-gray-300 rounded">
                     </div>
                     <div class=" mt-2 md:mt-3">
                         <label class="mr-7 md:text-xl font-semibold" for="">Rent :</label>
-                        <input type="text" class="md:h-7 bg-gray-300 rounded">
+                        <input id="rent" type="text" placeholder="Rent Expenses" class=" md:p-2 md:h-7 pl-2 bg-gray-300 rounded">
                     </div>
                     <div class=" mt-3 md:mt-3">
                         <label class="mr-1 md:text-xl font-semibold" for="">Clothes :</label>
-                        <input type="text" class="md:h-7 bg-gray-300 rounded">
+                        <input id="clothes" type="text" placeholder="Clothes Expenses" class=" md:p-2 md:h-7 pl-2 bg-gray-300 rounded">
                     </div>
                     <!-- Calculation Button -->
-                    <button class="mt-6 md:mt-16 bg-rose-600 md:px-8 px-4 py-1 md:py-2 rounded md:text-xl text-white md:font-bold font-semibold">Calculate</button>
+                    <button id="calculate" class="mt-6 md:mt-16 bg-rose-600 md:px-8 px-4 py-1 md:py-2 rounded md:text-xl text-white md:font-bold font-semibold">Calculate</button>
                     <!-- Total expense and balance area -->
-                    <h3 class="md:text-2xl mt-3 font-bold">Total Expenses : <span>00</span></h3>
-                    <h3 class="md:text-2xl md:mt-1 font-bold">Balance : <span>00</span></h3>
+                    <h3 class="md:text-2xl mt-3 font-bold">Total Expenses : $<span  id="total-expenses">00</span></h3>
+                    <h3 class="md:text-2xl md:mt-1 font-bold">Balance : $<span id="balance" >00</span></h3>
                     <!-- Savings area -->
                     <div class="mt-6 md:mt-16">
                         <label class="md:mr-3  md:text-xl font-semibold" for="">Save :</label>
-                        <input type="text" class="h-6 md:h-8 w-12 md:w-20 bg-gray-300 rounded">
-                        <label class="md:mx-3" for="">%</label>
-                        <button class="bg-rose-600 md:px-6 px-3 md:py-1 rounded md:text-xl text-white font-bold">Save</button>
+                        <input id="save-input" type="text" placeholder="Save %" class=" p-2 h-6 md:h-8 w-12 md:w-20 bg-gray-300 rounded">
+                        <label class="md:mx-3 md:font-bold" for="">%</label>
+                        <button id="save-button" class="bg-rose-600 md:px-6 px-3 md:py-1 rounded md:text-xl text-white font-bold">Save</button>
                     </div>
                     <!-- Saving amount text area -->
-                    <h3 class="md:text-2xl mt-3 font-bold">saving Amount : <span>00</span></h3>
-                    <h3 class="md:text-2xl md:mt-1 font-bold">Remaining Balance : <span>00</span></h3>
+                    <h3 class="md:text-2xl mt-3 font-bold">Saving Amount : $<span id="saving-amount" >00</span></h3>
+                    <h3 class="md:text-2xl md:mt-1 font-bold">Remaining Balance : $<span id="remaining-balance">00</span></h3>
                 </div>
             </div>
         </div>
     </section>
+    <script src="js/script.js"></script>
 </body>
 </html>
