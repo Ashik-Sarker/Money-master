@@ -75,12 +75,13 @@ document.getElementById('save-button').addEventListener('click', function () {
             document.getElementById('saving-amount').innerText = saving_amount;
             //remaining balance 
             document.getElementById('remaining-balance').innerText = currentBalance - saving_amount;
+
+             document.getElementById('income').value = '';
+             document.getElementById('food').value = '';
+             document.getElementById('rent').value = '';
+             document.getElementById('clothes').value = '';
+             document.getElementById('save-input').value = '';
         }
-        // document.getElementById('income').value = '';
-        // document.getElementById('food').value = '';
-        // document.getElementById('rent').value = '';
-        // document.getElementById('clothes').value = '';
-        // document.getElementById('save-input').value = '';
     }
     else {
         alert('Please Input positive number value how many amount you want to save');
