@@ -15,6 +15,7 @@ function expense() {
     }
     else {
         alert('please input positive value');
+        return 0;
     }
     
 }
