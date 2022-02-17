@@ -28,9 +28,15 @@ function balance() {
         // getting value from expenses
         const expenses = parseInt(expense());
         //setting value at expenses field
-        document.getElementById('total-expenses').innerText = expenses;
-        const amount = income_value - expenses;
-        return amount;
+        if (expenses > income_value) {
+            alert('Your expenses is higher than Income');
+            return 0;
+        }
+        else {
+            document.getElementById('total-expenses').innerText = expenses;
+            const amount = income_value - expenses;
+            return amount;
+        }
     }
     
     
