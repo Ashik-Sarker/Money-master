@@ -88,3 +88,5 @@ document.getElementById('save-button').addEventListener('click', function () {
         alert('Please Input positive number value how many amount you want to save');
     }
 })
+
+//Finished project
